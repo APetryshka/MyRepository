@@ -105,19 +105,22 @@ if ($auto == 'bmw') {
 
 // Задание 6
 
-$column = 10;
-$line = 10;
+echo '<table border="1">';
+for ($c = 1; $c <= 10; $c++) {
+    echo '<tr>';
+    for ($k = 1; $k <= 10; $k++) {
+        $result = $c * $k;
 
-for ($tr = 1; $tr <= $column; $tr ++)
-{
-    echo "<table  border='1'  width='300'>\n";
-    echo "<tr>";
-
-    for($td = 1; $td <= $line; $td++)
-    {
-        echo "<td width='25'>" . $tr * $td . "</td>";
+        echo '<td>';
+        if ($c % 2 == 0 && $k % 2 == 0) {
+            echo "($result)";
+        } elseif ($c % 2 !== 0 && $k % 2 !== 0) {
+            echo "[$result]";
+        } else {
+            echo $result;
+        }
+        echo '</td>';
     }
-    echo "</tr>";
+    echo '</tr>';
 }
-
-echo "</table>";
+echo '</table>';
