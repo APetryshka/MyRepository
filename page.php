@@ -110,38 +110,14 @@ $line = 10;
 
 for ($tr = 1; $tr <= $column; $tr ++)
 {
-    echo "<table  border='1'>";
+    echo "<table  border='1'  width='300'>\n";
     echo "<tr>";
+
     for($td = 1; $td <= $line; $td++)
     {
-        echo "<td>" .$tr * $td."</td>\n";
+        echo "<td width='25'>" . $tr * $td . "</td>";
     }
-    echo "</tr>\n";
-}
-
-echo "</table>";
-
-$rows = 10;
-$cols = 10;
-
-for ($tr = 1; $tr <= $rows; $tr ++)
-
-{
-
-    echo "<table  border='1' align='center' width='250'>\n";
-
-    echo "\t<tr>\n";
-
-    for($td = 1;$td <=$cols; $td++)
-
-    {
-
-        echo "\t\t<td width='25'>" .$tr * $td."</td>\n";
-
-    }
-
-    echo "\t</tr>\n";
-
+    echo "</tr>";
 }
 
 echo "</table>";
